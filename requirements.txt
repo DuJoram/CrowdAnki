@@ -2,3 +2,5 @@
 pathlib2
 simplejson
 sqlalchemy
+SIP
+PyQt5-sip

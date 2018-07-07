@@ -2,10 +2,11 @@ sudo: required
 dist: trusty
 language: python
 python:
-  - "2.7"
+  - "3.6"
 
 before_install:
+  - sudo echo "deb http://mirror.servers.com/ubuntu/ bionic main restricted universe" >> /etc/apt/sources.list.d/bionic
   - sudo apt-get -qq update
-  - sudo apt-get install -y anki python-sip
+  - sudo apt-get install -y anki
 
 script: python crowd_anki/test/test_main.py
